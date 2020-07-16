@@ -1,4 +1,4 @@
-FROM ubuntu:xenial AS plugin_sfu
+FROM ubuntu:bionic AS plugin_sfu
 
 RUN apt-get update && \
     apt-get upgrade -y && \
@@ -18,7 +18,7 @@ RUN git clone https://github.com/mozilla/janus-plugin-sfu.git && \
     cd janus-plugin-sfu && \
     ~/.cargo/bin/cargo build --release
 
-FROM ubuntu:xenial
+FROM ubuntu:bionic
 
 RUN apt-get update && \
     apt-get upgrade -y && \
