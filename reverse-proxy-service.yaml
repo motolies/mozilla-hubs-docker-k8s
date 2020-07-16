@@ -8,6 +8,7 @@ metadata:
   labels:
     io.kompose.service: reverse-proxy
   name: reverse-proxy
+  namespace: librareome
 spec:
   ports:
   - name: "80"
