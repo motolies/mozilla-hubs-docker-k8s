@@ -1,0 +1,15 @@
+image: gcr.io/kaniko-project/executor:debug-v0.24.0
+   
+stages:
+  - build-and-push
+   
+build-and-push-job:
+  stage: build-and-push
+  except:
+    changes:
+      - "**/*.yaml"
+      - "README.md"
+      
+  script:
+    - echo "{\"auths\":{\"$CI_REGISTRY\":{\"username\":\"$CI_REGISTRY_USER\",\"password\":\"$CI_REGISTRY_PASSWORD\"}}}" > /kaniko/.docker/config.json
+    - /kaniko/executor --cache=true --context $CI_PROJECT_DIR --dockerfile $CI_PROJECT_DIR/janus/Dockerfile --destination $CI_REGISTRY_IMAGE-janus:${CI_COMMIT_SHA:0:8} --destination $CI_REGISTRY_IMAGE-janus:latest
