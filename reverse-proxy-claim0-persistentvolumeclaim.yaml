@@ -5,7 +5,9 @@ metadata:
   labels:
     io.kompose.service: reverse-proxy-claim0
   name: reverse-proxy-claim0
+  namespace: librareome
 spec:
+  storageClassName: rook-ceph-block
   accessModes:
   - ReadWriteOnce
   resources:
