@@ -8,6 +8,7 @@ metadata:
   labels:
     io.kompose.service: janus
   name: janus
+  namespace: librareome
 spec:
   replicas: 1
   selector:
