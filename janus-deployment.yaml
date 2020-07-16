@@ -25,7 +25,7 @@ spec:
         io.kompose.service: janus
     spec:
       containers:
-      - image: janus
+      - image: gitlab-registry.nautilus.optiputer.net/ar-noc/mozilla-hubs-docker
         imagePullPolicy: ""
         name: janus
         resources:
