@@ -26,7 +26,7 @@ spec:
     spec:
       containers:
       - image: gitlab-registry.nautilus.optiputer.net/ar-noc/hubs
-        command: ["bash", "-c"]
+        command: ["ash", "-c"]
         args: ["npm run login && yarn start"]
         imagePullPolicy: ""
         name: hubs
