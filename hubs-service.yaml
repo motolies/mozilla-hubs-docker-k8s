@@ -13,8 +13,24 @@ spec:
   ports:
   - name: "8080"
     port: 8080
-    targetPort: 443
+#    targetPort: 443
   selector:
     io.kompose.service: hubs
 status:
   loadBalancer: {}
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: hubs
+  namespace: librareome
+  annotations:
+    traefik.ingress.kubernetes.io/router.tls: ""
+spec:
+  rules:
+  - host: hubs.nautilus.optiputer.net
+    http:
+      paths:
+      - backend:
+          serviceName: hubs
+          servicePort: 8080
