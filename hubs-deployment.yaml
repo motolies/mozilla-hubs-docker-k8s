@@ -44,9 +44,9 @@ spec:
         - name: ITA_SERVER
           value: ""
         command: ["ash", "-c"]
-#        args: ["sleep infinity"]
+        args: ["sleep infinity"]
 #        args: ["npm run login && yarn start"]
-        args: ["npm run dev"]
+#        args: ["npm run dev"]
         imagePullPolicy: ""
         name: hubs
         ports:
