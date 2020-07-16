@@ -8,6 +8,7 @@ metadata:
   labels:
     io.kompose.service: adminer
   name: adminer
+  namespace: librareome
 spec:
   replicas: 1
   selector:
