@@ -36,7 +36,7 @@ spec:
         - name: NON_CORS_PROXY_DOMAINS
           value: "hubs.nautilus.optiputer.net,dev.reticulum.io"
         - name: BASE_ASSETS_PATH
-          value: "https://hubs.nautilus.optiputer.net:8989/"
+          value: "https://hubs.nautilus.optiputer.net/"
         - name: RETICULUM_SERVER
           value: "hubs:4000"
         - name: POSTGREST_SERVER
