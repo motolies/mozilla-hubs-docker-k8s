@@ -30,7 +30,13 @@ spec:
         name: adminer
         ports:
         - containerPort: 8080
-        resources: {}
+        resources:
+          limits:
+            memory: "8Gi"
+            cpu: "1"
+          requests:
+            memory: "100Mi"
+            cpu: "500m"
       restartPolicy: Always
       serviceAccountName: ""
       volumes: null
