@@ -30,7 +30,14 @@ spec:
         name: admin
         ports:
         - containerPort: 443
-        resources: {}
+        resources:
+          limits:
+            nvidia.com/gpu: 1
+            memory: "128Gi"
+            cpu: "8"
+          requests:
+            memory: "100Mi"
+            cpu: "500m"
       restartPolicy: Always
       serviceAccountName: ""
       volumes: null
