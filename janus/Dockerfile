@@ -86,9 +86,9 @@ WORKDIR /opt/janus
 
 COPY --from=plugin_sfu /janus-plugin-sfu/target/release/libjanus_plugin_sfu.so /opt/janus/lib/janus/plugins/
 
-COPY ./conf/janus.plugin.sfu.cfg /opt/janus/etc/janus/janus.plugin.sfu.cfg
-COPY ./conf/janus.transport.http.cfg /opt/janus/etc/janus/janus.transport.http.cfg
-COPY ./conf/janus.transport.websockets.cfg /opt/janus/etc/janus/janus.transport.websockets.cfg
+COPY ./janus/conf/janus.plugin.sfu.cfg /opt/janus/etc/janus/janus.plugin.sfu.cfg
+COPY ./janus/conf/janus.transport.http.cfg /opt/janus/etc/janus/janus.transport.http.cfg
+COPY ./janus/conf/janus.transport.websockets.cfg /opt/janus/etc/janus/janus.transport.websockets.cfg
 
 EXPOSE 8989
 
