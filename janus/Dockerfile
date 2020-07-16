@@ -1,4 +1,5 @@
 FROM ubuntu:bionic AS plugin_sfu
+ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && \
     apt-get upgrade -y && \
@@ -10,6 +11,9 @@ RUN apt-get update && \
     libglib2.0 \
     libjansson-dev && \
     apt-get clean && \
+    ln -fs /usr/share/zoneinfo/America/Los_Angles /etc/localtime && \
+    apt-get install -y tzdata && \
+    dpkg-reconfigure --frontend noninteractive tzdata && \
     rm -rf /var/lib/apt/lists/*
 
 RUN curl https://sh.rustup.rs | sh -s -- -y
