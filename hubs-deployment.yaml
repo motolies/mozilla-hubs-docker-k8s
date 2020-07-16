@@ -27,8 +27,9 @@ spec:
       containers:
       - image: gitlab-registry.nautilus.optiputer.net/ar-noc/hubs
         command: ["ash", "-c"]
-        args: ["sleep infinity"]
+#        args: ["sleep infinity"]
 #        args: ["npm run login && yarn start"]
+        args: ["npm run dev"]
         imagePullPolicy: ""
         name: hubs
         ports:
