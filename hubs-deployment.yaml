@@ -26,6 +26,23 @@ spec:
     spec:
       containers:
       - image: gitlab-registry.nautilus.optiputer.net/ar-noc/hubs
+        env:
+        - name: HOST
+          value: "hubs.local"
+        - name: RETICULUM_SOCKET_SERVER
+          value: "hubs.local"
+        - name: CORS_PROXY_SERVER
+          value: "hubs-proxy.local:4000"
+        - name: NON_CORS_PROXY_DOMAINS
+          value: "hubs.local,dev.reticulum.io"
+        - name: BASE_ASSETS_PATH
+          value: "https://hubs.local:8989/"
+        - name: RETICULUM_SERVER
+          value: "hubs.local:4000"
+        - name: POSTGREST_SERVER
+          value: "db"
+        - name: ITA_SERVER
+          value: ""
         command: ["ash", "-c"]
 #        args: ["sleep infinity"]
 #        args: ["npm run login && yarn start"]
