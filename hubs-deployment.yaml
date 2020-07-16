@@ -38,7 +38,7 @@ spec:
         - name: BASE_ASSETS_PATH
           value: "https://hubs.nautilus.optiputer.net:8989/"
         - name: RETICULUM_SERVER
-          value: "hubs.nautilus.optiputer.net:4000"
+          value: "hubs:4000"
         - name: POSTGREST_SERVER
           value: "db"
         - name: ITA_SERVER
