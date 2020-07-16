@@ -2,10 +2,10 @@
 
 ``` bash
 # clone all repos
-git clone git@github.com:aichildren/reticulum.git
-git clone git@github.com:aichildren/hubs.git
-git clone git@github.com:aichildren/Spoke.git
-git clone git@github.com:aichildren/mozilla-hubs-docker.git
+git clone https://gitlab.nautilus.optiputer.net/ar-noc/reticulum.git
+git clone https://gitlab.nautilus.optiputer.net/ar-noc/hubs.git
+git clone https://gitlab.nautilus.optiputer.net/ar-noc/Spoke.git
+git clone https://gitlab.nautilus.optiputer.net/ar-noc/mozilla-hubs-docker.git
 
 # switch to k8s branch for recent dockerfiles
 pushd reticulum
