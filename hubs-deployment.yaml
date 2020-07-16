@@ -28,17 +28,17 @@ spec:
       - image: gitlab-registry.nautilus.optiputer.net/ar-noc/hubs
         env:
         - name: HOST
-          value: "hubs.local"
+          value: "hubs"
         - name: RETICULUM_SOCKET_SERVER
-          value: "hubs.local"
+          value: "hubs"
         - name: CORS_PROXY_SERVER
-          value: "hubs-proxy.local:4000"
+          value: "hubs-proxy:4000"
         - name: NON_CORS_PROXY_DOMAINS
-          value: "hubs.local,dev.reticulum.io"
+          value: "hubs,dev.reticulum.io"
         - name: BASE_ASSETS_PATH
-          value: "https://hubs.local:8989/"
+          value: "https://hubs:8989/"
         - name: RETICULUM_SERVER
-          value: "hubs.local:4000"
+          value: "hubs:4000"
         - name: POSTGREST_SERVER
           value: "db"
         - name: ITA_SERVER
