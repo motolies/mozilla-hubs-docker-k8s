@@ -32,9 +32,8 @@ spec:
         - containerPort: 443
         resources:
           limits:
-            nvidia.com/gpu: 1
-            memory: "128Gi"
-            cpu: "8"
+            memory: "8Gi"
+            cpu: "1"
           requests:
             memory: "100Mi"
             cpu: "500m"
